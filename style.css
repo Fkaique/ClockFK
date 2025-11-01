@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clocks{
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    border-radius: 10px;
+}
+
+#clocks >*:nth-child(2n+3){
+    margin-left: 16px;
+}
+
+
+.clock {
+    position: relative;
+    margin: 0 auto;
+    width: 32px;
+    aspect-ratio: 1;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 50%;
+    background-color: rgb(164, 164, 164);
+}
+
+.pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: rgb(41, 41, 41);
+    transform-origin: 0 50%;
+    transition: all .8s;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+}
